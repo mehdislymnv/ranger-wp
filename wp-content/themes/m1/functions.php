@@ -1,4 +1,9 @@
+
+
+
+
 <?php
+
 
 /**
  * Rangers functions and definitions
@@ -49,10 +54,14 @@ if (!function_exists('m1_setup')) :
 		 */
 		add_theme_support('post-thumbnails');
 
+
+		/* Register menu */
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__('Primary', 'm1'),
+				'primary' => esc_html__('Header Menu','m1'),
+				'footer' => esc_html__('Footer', 'm1'),
+				'mobile' => esc_html__('Mobile11', 'm1')
 			)
 		);
 
@@ -402,5 +411,7 @@ require get_template_directory() . '/inc/cpt/cpt-club.php';
 
 require get_template_directory() . '/inc/widgets/latest-posts-widget.php';
 
+
+require get_template_directory() . '/inc/navigations/primary-nav.php';
 
 require get_template_directory() . '/inc/widgets/club-info-widget.php';

@@ -12,6 +12,7 @@ function news_register_post_type() {
       'new_item'      => 'New News',
       'edit_item'     => 'Edit News',
     ],
+    'show_in_nav_menus' => true,
     //'register_meta_box_cb' => 'testimonial_meta_box_cb',
     'menu_icon'          => get_template_directory_uri(  ).'/assets/img/news-icon.png',
     'public'             => true,
