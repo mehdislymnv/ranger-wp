@@ -1,7 +1,3 @@
-
-
-
-
 <?php
 
 
@@ -150,6 +146,17 @@ function m1_widgets_init()
 		array(
 			'name'          => esc_html__('Club Info Sidebar', 'm1'),
 			'id'            => 'club-info-sidebar',
+			'description'   => esc_html__('Add widgets here.', 'm1'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Footer WIDGETS', 'm1'),
+			'id'            => 'footer_widgets',
 			'description'   => esc_html__('Add widgets here.', 'm1'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -409,9 +416,16 @@ require get_template_directory() . '/inc/cpt/cpt-club.php';
 // }
 // 
 
-require get_template_directory() . '/inc/widgets/latest-posts-widget.php';
+
 
 
 require get_template_directory() . '/inc/navigations/primary-nav.php';
 
+
+#widget club
 require get_template_directory() . '/inc/widgets/club-info-widget.php';
+#widget posts
+require get_template_directory() . '/inc/widgets/latest-posts-widget.php';
+
+#single widgets footer
+require get_template_directory() . '/inc/widgets/sn-about-widget.php';
